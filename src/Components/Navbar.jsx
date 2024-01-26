@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center h-20 gap-4 pr-9">
-      <NavLink to="/" className="flex h-full">
+    <div className="flex justify-between items-center shadow-lg h-20 gap-4 pr-9">
+      <NavLink to="/" className="flex h-full ">
         <img
           src="https://www.jiosaavn.com/corporate/_i/brand-guide/jiosaavn-logo-inline.png"
           alt="logo"
@@ -33,16 +33,16 @@ const Navbar = () => {
       <input
         type="text"
         placeholder="Search for songs, artists, playlists, podcasts"
-        className="border-2 border-slate-500 py-2 px-4 rounded-full w-1/3 flex justify-center"
+        className="border outline-none border-zinc-300 py-2 px-4 rounded-full w-1/3 flex justify-center"
       />
 
-      <div className="flex gap-6 justify-center items-center ">
+      <div className="flex gap-16 justify-center items-center ">
         <div>
           <h1 className="font-bold text-sm">Music Language</h1>
-          <h6 className="font-light text-sm">Hindi</h6>
+          <h6 className="font-normal text-sm text-slate-500">Hindi</h6>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-9">
           <NavLink
             className="hover:text-[#1CCCB0] transition-all ease-in-out"
             to="/login"
