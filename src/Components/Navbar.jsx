@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="flex justify-between items-center h-20 gap-4 pr-9">
-      <div className="flex h-full">
+      <NavLink to="/" className="flex h-full">
         <img
           src="https://www.jiosaavn.com/corporate/_i/brand-guide/jiosaavn-logo-inline.png"
           alt="logo"
@@ -29,7 +29,7 @@ const Navbar = () => {
             Go Pro
           </NavLink>
         </div>
-      </div>
+      </NavLink>
       <input
         type="text"
         placeholder="Search for songs, artists, playlists, podcasts"
