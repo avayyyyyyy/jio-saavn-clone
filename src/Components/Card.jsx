@@ -1,21 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Card = () => {
+const Card = ({ image, name, singer }) => {
   return (
-    <NavLink className="flex-col p-4 flex justify-center items-center w-fit gap-4 hover:shadow-lg transition-all ease-in-out rounded-md ">
+    <div className="flex-col p-2 cursor-pointer flex justify-center w-44 gap-4 hover:shadow-2xl transition-all ease-in-out rounded-md ">
       <div className="black">
-        <img
-          className="w-44 rounded-md"
-          src="https://c.saavncdn.com/679/Thunderclouds-English-2018-20180809032729-500x500.jpg"
-          alt="music-image"
-        />
+        <img className="w-44 rounded-md" src={image} alt="music-image" />
       </div>
       <div>
-        <h1>Thunderclouds</h1>
-        <h1 className="text-sm text-center text-zinc-500">Lsd</h1>
+        {name.length >= 10 ? (
+          <h1 className="text-sm">{name.slice(0, 10)}...</h1>
+        ) : (
+          <h1 className="text-sm">{name}</h1>
+        )}
+        {singer.length >= 10 ? (
+          <h1 className="text-xs  text-zinc-500">{singer.slice(0, 20)}...</h1>
+        ) : (
+          <h1 className="text-xs text-zinc-500">{singer}</h1>
+        )}
+        {/* <h1 className="text-sm text-center text-zinc-500">{singer}</h1> */}
       </div>
-    </NavLink>
+    </div>
   );
 };
 
