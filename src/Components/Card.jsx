@@ -1,9 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Card = ({ image, name, singer }) => {
+const Card = ({ image, name, singer, data }) => {
+  // console.log(onClick);
+
   return (
-    <div className="flex-col p-2 cursor-pointer flex justify-center w-44 gap-4 hover:shadow-2xl transition-all ease-in-out rounded-md ">
+    <Link
+      to={`/albums/${data.id}`}
+      className="flex-col p-2 cursor-pointer flex justify-center w-44 gap-4 hover:shadow-2xl transition-all ease-in-out rounded-md "
+    >
       <div className="black">
         <img className="w-44 rounded-md" src={image} alt="music-image" />
       </div>
@@ -20,7 +25,7 @@ const Card = ({ image, name, singer }) => {
         )}
         {/* <h1 className="text-sm text-center text-zinc-500">{singer}</h1> */}
       </div>
-    </div>
+    </Link>
   );
 };
 

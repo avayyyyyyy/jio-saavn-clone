@@ -11,14 +11,13 @@ const TopAlbum = () => {
 
   useEffect(() => {
     axios
-      .get("https://saavn.me/modules?language=hindi")
+      .get("https://saavn.me/modules?language=hindi,english")
       .then((res) => {
         setAllSongs(res.data.data.albums);
         setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        setIsLoading(false);
       });
   }, []);
 
@@ -39,6 +38,7 @@ const TopAlbum = () => {
               <div className="flex gap-7">
                 {halfLength.map((e) => (
                   <Card
+                    data={e}
                     key={e.id} // Use a unique identifier if available
                     image={e.image[2].link}
                     name={e.name}
@@ -46,9 +46,10 @@ const TopAlbum = () => {
                   />
                 ))}
               </div>
-              <div className="flex gap-7">
+              <div className="flex gap-7 pb-11">
                 {remaining.map((e) => (
                   <Card
+                    data={e}
                     key={e.id} // Use a unique identifier if available
                     image={e.image[2].link}
                     name={e.name}

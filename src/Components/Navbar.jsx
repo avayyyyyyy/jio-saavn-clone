@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="flex gap-16 justify-center items-center ">
         <div>
           <h1 className="font-bold text-sm">Music Language</h1>
-          <h6 className="font-normal text-sm text-slate-500">Hindi</h6>
+          <h6 className="font-normal text-xs text-slate-500">Hindi, English</h6>
         </div>
 
         <div className="flex gap-9">
